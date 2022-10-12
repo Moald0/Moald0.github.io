@@ -67,12 +67,3 @@ body {
   background-color: black; /* Bakgrunnsfarge */
 }
 
-#meny {
-  display: flex;
-}
-a {
-  background-color: #C5EBFA;
-  flex-grow: 1;
-  margin: 10px;
-  padding: 200px;
-}
