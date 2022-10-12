@@ -1,0 +1,34 @@
+body {
+    background-color: rgb(255, 255, 255); /* hvit bakgrunnsfarge */
+    font-family: Georgia, Times;
+  }
+
+  hr{
+    border-color: rgb(233, 31, 31);
+  }
+
+ h1 {
+    font-family: Arial, sans-serif;
+    color:rgb(233, 31, 31);
+    width: 40%;
+    margin: 50px auto; /* 50 px over elementet, auto midtstiller det */
+    text-align: center; /* Får teksten i midten */
+}
+div {
+    width: 50%; /* bredde: 50 % av vinduet */
+    border: 2px solid rgb(233, 31, 31); /* rød bakgrunnsfarge */
+    padding: 10px; /* luft mellom kantlinjene og innholdet */
+    margin: 100px auto; /* 100 px over elementet, auto midtstiller det */
+    text-align: center; /* Får teksten i midten */
+    }
+p {
+    width: 50%; /* bredde: 50 % av vinduet */
+    border: 2px solid rgb(233, 31, 31); /* rød bakgrunnsfarge */
+    padding: 10px; /* luft mellom kantlinjene og innholdet */
+    margin: 100px auto; /* 100 px over elementet, auto midtstiller det */
+    text-align: center; /* Får teksten i midten */
+}
+a:hover {
+    color: rgb(233, 31, 31);
+    text-decoration-color: #cccccc;
+  }
