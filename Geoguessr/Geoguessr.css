@@ -2,13 +2,7 @@ body {
     background-color: rgb(255, 255, 255); /* hvit bakgrunnsfarge */
     font-family: Georgia, Times; /* Skriftype */
   }
-  #hoved  {                    /*Oversikt over de ulike kodene */
-    width: 50%;                /* bredde: 60 % av vinduet */
-    margin: 100px auto;        /* 100 px over elementet, auto midtstiller det */
-    padding: 40px;             /* luft mellom kantlinjene og innholdet */
-    background-color: white;   /* hvit bakgrunnsfarge */
-    border: 1px solid #cccccc; /* grå kantlinje */
-  }
+ 
     
   hr{
     border-color: rgb(233, 31, 31); /* Border farge */
@@ -26,7 +20,7 @@ body {
       text-align: center; /* Får teksten i midten */
   }
   
-  div {
+  #div1 {
   width: 50%; /* bredde: 50 % av vinduet */
   border: 2px solid rgb(233, 31, 31); /* rød bakgrunnsfarge */
   padding: 10px; /* luft mellom kantlinjene og innholdet */
@@ -67,3 +61,17 @@ body {
   background-color: black; /* Bakgrunnsfarge */
 }
 
+/*main side */
+#main {
+  display: grid;
+  gap: 1px;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  text-align: center;
+}
+#main > div {
+  width: 300px;
+  height: 100px;
+  background-color: #aac9c6;
+  border: 2px solid black;
+}
