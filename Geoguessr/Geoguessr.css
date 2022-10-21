@@ -61,7 +61,23 @@ body {
   background-color: black; /* Bakgrunnsfarge */
 }
 
-/*main side */
+/* #region main side */
+#topp{
+  display: grid;
+  grid-template-columns: 10% 20% 55% 15%;
+  gap: 10px;
+  grid-template-rows: 115px;
+  background-color: #aac9c6;
+
+}
+#topp > div {
+  background-color: none;
+  
+}
+
+
+
+
 #main {
   display: grid;
   gap: 1px;
@@ -75,3 +91,4 @@ body {
   background-color: #aac9c6;
   border: 2px solid black;
 }
+/* #endregion*/
