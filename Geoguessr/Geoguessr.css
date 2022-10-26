@@ -101,7 +101,7 @@ body {
 #main > div {
   width: 300px;
   height: 100px;
-  background-color: #aac9c6;
+  background-color: rgba(145, 203, 207, 0);
   border: 2px solid black;
 }
 /* #endregion*/
@@ -111,4 +111,18 @@ body {
   margin-left: auto;
   margin-right: auto;
   border: 4px solid rgb(233, 31, 31);
+}
+
+#toppboks {
+  width: 50%; /* bredde: 50 % av vinduet */
+  border: 2px solid rgb(233, 31, 31); /* rød bakgrunnsfarge */
+  padding: 1px; /* luft mellom kantlinjene og innholdet */
+  margin: 10px auto; /* 100 px over elementet, auto midtstiller det */
+  text-align: center; /* Får teksten i midten */
+  
+}
+
+#imgtopp {
+  border: #aac9c6;
+  
 }
