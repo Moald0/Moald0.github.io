@@ -80,7 +80,7 @@ body {
 /* #region main side */
 #topp{
   display: grid;
-  grid-template-columns: 10% 20% 55% 15%;
+  grid-template-columns: 10% 25% 50% 15%;
   gap: 10px;
   grid-template-rows: 115px;
   background-color: #aac9c6;
@@ -123,6 +123,5 @@ body {
 }
 
 #imgtopp {
-  border: #aac9c6;
-  
+  background-color: none;
 }
