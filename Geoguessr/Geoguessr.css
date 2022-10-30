@@ -101,7 +101,7 @@ body {
 #main > div {
   width: 300px;
   height: 100px;
-  background-color: rgba(145, 203, 207, 0);
+  background-color: #aac9c6;
   border: 2px solid black;
 }
 /* #endregion*/
@@ -119,20 +119,24 @@ body {
   padding: 1px; /* luft mellom kantlinjene og innholdet */
   margin: 10px auto; /* 100 px over elementet, auto midtstiller det */
   text-align: center; /* Får teksten i midten */
-  
+  background-color: #04AA6D;
 }
 
-#imgtopp {
-  background-color: none;
+#toppbilde {
+  padding: 1px; /* luft mellom kantlinjene og innholdet */
+  margin: 10px auto; /* 100 px over elementet, auto midtstiller det */
 }
+
+
 
 /*#region Dropdown meny hovedside*/
 .dropbtn {
-  background-color: white;
+  background-color: #04AA6D;
   color: black;
-  padding: 16px;
+  padding: 35px;
   font-size: 16px;
   border: 2px solid rgb(233, 31, 31);
+  margin: 10px auto; /* 10 px over elementet, auto midtstiller det */
 }
 
 .dropdown {
@@ -162,3 +166,6 @@ body {
 
 .dropdown:hover .dropbtn {background-color: #3e8e41;}
 /*#endregion*/
+
+
+
