@@ -167,5 +167,25 @@ body {
 .dropdown:hover .dropbtn {background-color: #3e8e41;}
 /*#endregion*/
 
+/*#region zoom*/
+  
+@media only screen and (min-width: 600px) {
+  html {
+    zoom: .8;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  html {
+    zoom: .9;        
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  html {
+    zoom: 1;
+  }
+}
+/*#endregion*/
 
 
