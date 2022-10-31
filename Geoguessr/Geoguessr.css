@@ -26,6 +26,7 @@ body {
   padding: 10px; /* luft mellom kantlinjene og innholdet */
   margin: 100px auto; /* 100 px over elementet, auto midtstiller det */
   text-align: center; /* Får teksten i midten */
+  background-color: #aac9c6;
   }
 
   #div2 {
@@ -34,6 +35,7 @@ body {
     padding: 10px; /* luft mellom kantlinjene og innholdet */
     margin: 100px auto; /* 1 px over elementet, auto midtstiller det */
     text-align: center; /* Får teksten i midten */
+    background-color: #aac9c6;
     }
   #div3 {
     text-align: center; /* Får teksten i midten */
@@ -46,6 +48,7 @@ body {
     border: 2px solid rgb(233, 31, 31); /* rød bakgrunnsfarge */
     padding: 10px; /* luft mellom kantlinjene og innholdet */
     margin: 100px auto; /* 1 px over elementet, auto midtstiller det */
+    background-color: #aac9c6;
   }
 
   p {
@@ -54,6 +57,8 @@ body {
     padding: 10px; /* luft mellom kantlinjene og innholdet */
     margin: 100px auto; /* 100 px over elementet, auto midtstiller det */
     text-align: center; /* Får teksten i midten */
+    background-color: #aac9c6;
+
 }
 /* #region de tre gamemodesa */
 #divimg {
@@ -71,7 +76,8 @@ body {
   border: 4px solid black;
 }
 #imghover:hover{
-  background-color: black; /* Bakgrunnsfarge */ 
+  background-color: black; /* Bakgrunnsfarge */
+  border-radius: 25px; /*Lager "smooth" hjørner, altså radiusen til firkanten */ 
 }
 
 
@@ -88,13 +94,12 @@ body {
 }
 #topp > div {
   background-color: none;
-  
 }
 
 #main {
   display: grid;
   gap: 1px;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   justify-items: center;
   text-align: center;
 }
