@@ -122,19 +122,19 @@ body {
   width: 50%; /* bredde: 50 % av vinduet */
   border: 2px solid rgb(233, 31, 31); /* rød bakgrunnsfarge */
   padding: 1px; /* luft mellom kantlinjene og innholdet */
-  margin: 10px auto; /* 100 px over elementet, auto midtstiller det */
+  margin: 10px auto; /* 10 px over elementet, auto midtstiller det */
   text-align: center; /* Får teksten i midten */
   background-color: #04AA6D;
 }
 
 #toppbilde {
   padding: 1px; /* luft mellom kantlinjene og innholdet */
-  margin: 10px auto; /* 100 px over elementet, auto midtstiller det */
+  margin: 10px auto; /* 10 px over elementet, auto midtstiller det */
 }
 
 
-
 /*#region Dropdown meny hovedside*/
+/*Stilen på meny-boksen, farge, border osv.*/
 .dropbtn {
   background-color: #04AA6D;
   color: black;
@@ -143,12 +143,12 @@ body {
   border: 2px solid rgb(233, 31, 31);
   margin: 10px auto; /* 10 px over elementet, auto midtstiller det */
 }
-
+/*Posisjonerer <div>'en*/
 .dropdown {
   position: relative;
   display: inline-block;
 }
-
+/*Det som definerer dropdownen, farge osv.*/
 .dropdown-content {
   display: none;
   position: absolute;
@@ -157,40 +157,21 @@ body {
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
-
+/*Linker inne i dropdownen/menyen*/
 .dropdown-content a {
   color: black;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
 }
-
+/*Når man hoverer over det under menyen vil det skifte farge*/
 .dropdown-content a:hover {background-color: #ddd;}
-
+/*Når man hoverer over menyen vil det under vises*/
 .dropdown:hover .dropdown-content {display: block;}
-
+/*Når man hoverer over meny-boksen vil den få en litt mørkere grønn farge*/
 .dropdown:hover .dropbtn {background-color: #3e8e41;}
 /*#endregion*/
 
-/*#region zoom*/
-  
-@media only screen and (min-width: 600px) {
-  html {
-    zoom: .8;
-  }
-}
 
-@media only screen and (min-width: 800px) {
-  html {
-    zoom: .9;        
-  }
-}
-
-@media only screen and (min-width: 1000px) {
-  html {
-    zoom: 1;
-  }
-}
-/*#endregion*/
 
 
