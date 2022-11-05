@@ -96,7 +96,7 @@ body {
 
 /*Definerer boksene på hovedsiden*/
 #main {
-  display: grid;
+  display: grid; /*Definere grid*/
   gap: 1px; /*Avstanden/mellomrom*/
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /*Hvor mye plass og hvor mange som skal stå i rekke,
   gjør det for at boksene skal justeres etter hva slags enhet brukeren bruker og eventuelt hvor mye zoomet inn/ut leseren har.*/
@@ -131,7 +131,7 @@ body {
   padding: 1px; /* luft mellom kantlinjene og innholdet */
   margin: 10px auto; /* 10 px over elementet, auto midtstiller det */
   text-align: center; /* Får teksten i midten */
-  background-color: #04AA6D;
+  background-color: #04AA6D; /*Bakgrunnsfarge*/
 }
 
 /*Definerer bilde i toppen*/
@@ -146,33 +146,33 @@ body {
 /*#region Dropdown meny hovedside*/
 /*Stilen på meny-boksen, farge, border osv.*/
 .dropbtn {
-  background-color: #04AA6D;
-  color: black;
-  padding: 35px;
-  font-size: 16px;
-  border: 2px solid rgb(233, 31, 31);
+  background-color: #04AA6D; /*Bakgrunnsfarge*/
+  color: black; /*Farge*/
+  padding: 35px; /* luft mellom kantlinjene og innholdet */
+  font-size: 16px; /*Skriftstørrelse*/
+  border: 2px solid rgb(233, 31, 31); /*Tykkelse og farge på border*/
   margin: 10px auto; /* 10 px over elementet, auto midtstiller det */
 }
 /*Posisjonerer <div>'en*/
 .dropdown {
-  position: relative;
-  display: inline-block;
+  position: relative; /*Endrer posisjonen relativt til dropdownen*/
+  display: inline-block; /*Setter en høyde og bredde for dropdownen, så den ser personlig mer "smooth" :)*/
 }
 /*Det som definerer dropdownen, farge osv.*/
 .dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  display: none; /*Har ingen effekt på layouten, men gjør det slik at dropdownen ikke vises før man hoverer over meny-boksen*/ 
+  position: absolute; /*Har en absolutt posisjon*/
+  background-color: #f1f1f1; /*Bakgrunnsfarge*/
+  min-width: 160px; /*Minimum bredde*/
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /*Fargen når man hoverer over dropdownen*/
   z-index: 1; /*z-index brukes for å få farge og teksten til å overlappes, sånn at fargen ikke er over teksten*/
 }
 /*Linker inne i dropdownen/menyen*/
 .dropdown-content a {
-  color: black;
-  padding: 12px 16px; 
-  text-decoration: none; /*Er jo egentlig lenke på dropdownen, men dette fjerner streken under teksten osv.*/ 
-  display: block;
+  color: black; /*farge*/
+  padding: 12px 16px; /* luft mellom kantlinjene og innholdet */
+  text-decoration: none; /*Ingen tekst dekorasjon, er egentlig lenke på dropdownen, men dette fjerner streken under teksten osv.*/ 
+  display: block; /*Starter på ny linje, altså dropdownen får fire "bokser", istedenfor at alt står på samme sted*/
 }
 /*Når man hoverer over det under menyen vil det skifte farge*/
 .dropdown-content a:hover {background-color: #ddd;}
