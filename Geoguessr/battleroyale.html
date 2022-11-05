@@ -1,32 +1,32 @@
 <!DOCTYPE html>
-<html lang="no">
+<html lang="no"> <!--Setter spåket til norsk, hjelper svaksynte med rett høytlesnings-språk-->
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Battle royale countries</title>
-    <link rel="icon" type="image/x-icon" href="./Bilder/og-logo.png">
-    <link rel="stylesheet" href="Geoguessr.css".css">
+    <meta charset="UTF-8"> <!--Forteller nettleseren å bruke UTF-8 (default setting, hjelper f.eks nettleseren å forstå skriften), som er den mest vanlige måten-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Skalerer nettsiden ut ifra hvilken enhet du er på-->
+    <title>Battle royale countries</title> <!--Tittel på nettsiden-->
+    <link rel="icon" type="image/x-icon" href="./Bilder/og-logo.png"> <!--Lager ikonet til nettsiden-->
+    <link rel="stylesheet" href="./Geoguessr.css".css"> <!--Linker css filen til html'en-->
 </head>
 <body>
-    <div id="topp">
+    <div id="topp"> <!--Lager toppsiden-->
+        <!--Menyen er laget med dropdown, der jeg lager en boks, med en liste over hva som kommer når man enten trykker eller hoverer over menyboksen-->
         <div class="dropdown">
             <button class="dropbtn">Meny</button>
             <div class="dropdown-content">
               <a href="./Geogusser.html">Geoguessr</a>
               <a href="./meningenmedspillet.html">Meningen med spillet</a>
-              <a href="./gamemodes.html">Ulike gamemodes</a>
+              <a href="./gamemodes.html">Ulike spillmoduser</a>
               <a href="./tips.html">Tips (kommer snart)</a>
             </div>
           </div>
-        <div><!--fake div--></div>
+        <div><!--fake div--></div> <!--Lager en fake div for at det skal være riktig plass mellom hvert av elementene, kanskje ikke den beste kodinga-->
         <div><a href="./mainpage.html"><img id="toppbilde" src="./Bilder/geoguessr-hele-namnet.png" width="351" height="78" alt="Geoguessr logo"></a></div>
         <div id="toppboks">Litt info<br><a href="infoside.html"><img id="imgtopp" src="./Bilder/geoguesser-hjelp.png" width="64" height="64" alt="Geoguessr logo"></a></div>
         </div>
     <hr>
     <h1>Battle royale countries</h1>
     <hr>
-    <div id="divlangtekst">Battle royale countries er en gamemode hvor du skal gjette hvilket land du er i.
+    <div id="divlangtekst">Battle royale countries er en spillemodus hvor du skal gjette hvilket land du er i.
         Du og 10 andre spillere skal kjempe om plassen helt til det kun er en igjen og det er sånn man vinner.
         I første runde er det 10 ledige plasser, så hvis alle gjetter det riktige landet hvor man er, går alle videre. 
         Hvis man ikke klarer å gjette riktig land, er man ute. 
@@ -34,9 +34,9 @@
         F.eks Hvis det er 6 spillere med i en runde, er det kun 5 ledige plasser, slikt at minst en spiller elimineres per runde.
         Poenget er altså å klare å gjette riktig i alle rundene og når man har kommet til en finale hvor det er to spillere igjen,
         kjemper de om den siste ledige plassen. Da er det lurt å gjette fort, for å gjette før motstanderen, men også være noenlunde 
-        sikre på hvilket land man er i. 
+        sikre på hvilket land eller region man befinner seg i. 
     </div>
     <p>Her kan du se et <a href="battleroyale-eksempel.html">eksempel.</a></p>
-    <div id="div2">Vil du <a href="./multiplayer.html">tilbake?</a></div>
+    <div id="div2">Vil du gå <a href="./multiplayer.html">tilbake?</a></div>
 </body>
 </html>
