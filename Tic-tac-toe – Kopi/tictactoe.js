@@ -1,14 +1,17 @@
-
+//c og r i programmet står for column og rows
+//definerer variablene
 var board;
 var playerO = "O";
 var playerX = "X";
 var currPlayer = playerO;
 var gameOver = false;
 
+//laster inn funksjon
 window.onload = function() {
     setGame();
 }
 
+//setter inn brettet 3x3
 function setGame() {
     board = [
                 [' ', ' ', ' '],
@@ -39,19 +42,19 @@ function setTile() {
         return;
     }
 
-    let coords = this.id.split("-");    //ex) "1-2" -> ["1", "2'"]
+    let coords = this.id.split("-");    //eksempel) "1-2" -> ["1", "2'"]
     let r = parseInt(coords[0]);
     let c = parseInt(coords[1]);
 
     if (board[r][c] != ' ') { 
-        //already taken spot
+        //allerede tatt plass (på brettet)
         return;
     }
     
-    board[r][c] = currPlayer; //mark the board
-    this.innerText = currPlayer; //mark the board on html
+    board[r][c] = currPlayer; //markerer brettet
+    this.innerText = currPlayer; //markerer bretter i html
 
-    //change players
+    //skifter spiller
     if (currPlayer == playerO) {
         currPlayer = playerX;
     }
@@ -59,17 +62,17 @@ function setTile() {
         currPlayer = playerO;
     }
 
-    //check winner
+    //sjekker vinner
     checkWinner();
 }
 
 
 function checkWinner() {
-    //horizontally, check 3 rows
+    //horisontalt, sjekker 3 rader
     for (let r = 0; r < 3; r++) {
         if (board[r][0] == board[r][1] && board[r][1] == board[r][2] && board[r][0] != ' ') {
-            //if we found the winning row
-            //apply the winner style to that row
+            //hvis vi finner "vinner" raden
+            //setter vinner stilen på den raden
             for (let i = 0; i < 3; i++) {
                 let tile = document.getElementById(r.toString() + "-" + i.toString());
                 tile.classList.add("winner");
@@ -79,11 +82,11 @@ function checkWinner() {
         }
     }
 
-    //vertically, check 3 columns
+    //vertikalt, sjekker 3 kolonner
     for (let c = 0; c < 3; c++) {
         if (board[0][c] == board[1][c] && board[1][c] ==  board[2][c] && board[0][c] != ' ') {
-            //if we found the winning col
-            //apply the winner style to that col
+            //hvis vi finner "vinner" kolonnen
+            //setter vinner stilen på den kolonnen
             for (let i = 0; i < 3; i++) {
                 let tile = document.getElementById(i.toString() + "-" + c.toString());                
                 tile.classList.add("winner");
@@ -93,7 +96,7 @@ function checkWinner() {
         }
     }
 
-    //diagonally
+    //diagonalt
     if (board[0][0] == board[1][1] && board[1][1] == board[2][2] && board[0][0] != ' ') {
         for (let i = 0; i < 3; i++) {
             let tile = document.getElementById(i.toString() + "-" + i.toString());                
@@ -103,7 +106,7 @@ function checkWinner() {
         return;
     }
 
-    //anti-diagonally
+    //anti-diagonalt
     if (board[0][2] == board[1][1] && board[1][1] == board[2][0] && board[0][2] != ' ') {
         //0-2
         let tile = document.getElementById("0-2");                
@@ -120,3 +123,4 @@ function checkWinner() {
         return;
     }
 }
+
