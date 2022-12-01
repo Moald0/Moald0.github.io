@@ -3,7 +3,7 @@
 var board;
 var playerO = "O";
 var playerX = "X";
-var currPlayer = playerO;
+var currPlayer = playerX;
 var gameOver = false;
 
 //laster inn funksjon
