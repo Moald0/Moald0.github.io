@@ -21,15 +21,19 @@ function setGame() {
 
     for (let r = 0; r < 3; r++) {
         for (let c = 0; c < 3; c++) {
+            //<div id"0-0"></div>
             let tile = document.createElement("div");
             tile.id = r.toString() + "-" + c.toString();
             tile.classList.add("tile");
+            //Hvis raden er 0 eller 1, adder vi en horisontal linje
             if (r == 0 || r == 1) {
                 tile.classList.add("horizontal-line");
             }
+            //Hvis kollonnen er 0 eller 1, adder vi en vertikal linje
             if (c == 0 || c == 1) {
                 tile.classList.add("vertical-line");
             }
+            //Setter inn linjene/boksene 9 ganger og gjør det mulig å klikke boksene
             tile.innerText = "";
             tile.addEventListener("click", setTile);
             document.getElementById("board").appendChild(tile);
@@ -37,24 +41,26 @@ function setGame() {
     }
 }
 
+//definerer funksjonen, når spillet er over blir boksene "unclickable"
 function setTile() {
     if (gameOver) {
         return;
     }
 
+    //kordinatene på brettet
     let coords = this.id.split("-");    //eksempel) "1-2" -> ["1", "2'"]
     let r = parseInt(coords[0]);
     let c = parseInt(coords[1]);
 
     if (board[r][c] != ' ') { 
-        //allerede tatt plass (på brettet)
+        //allerede tatt plass (på brettet), gjør det sånn at man ikke kan trykke på plassen hvis den er allerede tatt
         return;
     }
     
-    board[r][c] = currPlayer; //markerer brettet
-    this.innerText = currPlayer; //markerer bretter i html
+    board[r][c] = currPlayer; //oppdaterer brettet
+    this.innerText = currPlayer; //oppdaterer bretter i html
 
-    //skifter spiller
+    //skifter spiller/endrer spiller
     if (currPlayer == playerO) {
         currPlayer = playerX;
     }
@@ -66,7 +72,7 @@ function setTile() {
     checkWinner();
 }
 
-
+//definerer vinner (er det samme på alle, bare horisontalt, diagonalt osv.)
 function checkWinner() {
     //horisontalt, sjekker 3 rader
     for (let r = 0; r < 3; r++) {
@@ -123,4 +129,5 @@ function checkWinner() {
         return;
     }
 }
+
 
