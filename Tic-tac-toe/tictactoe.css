@@ -18,7 +18,7 @@ hr{   /*Definerer den horisontale linja*/
 }
 
 /*Definerer de 9 boksene i brettet (3x3)*/
-/*Fordi bretter totalt har en bredde og høyde på 450px, er høyden og bredde i boksene
+/*Fordi brettet totalt har en bredde og høyde på 450px, er høyden og bredden i boksene
 150 (450/3), men fordi vi trenger litt plass til strekene har vi 147px, (3px til strekene)*/
 .tile{
     width: 147px;
