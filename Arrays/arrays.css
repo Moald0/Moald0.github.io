@@ -1,0 +1,43 @@
+/*Hvordan overskriften skal være*/
+h1 {
+    color: black; /* Fargen på h1 */
+    text-align: center; /* Får teksten i midten */
+    margin: 50px auto; /* 50 px over elementet, auto midtstiller det */
+}
+hr{   /*Definerer den horisontale linja*/
+    width: 500px;
+    height: 3px; 
+    background-color: black;
+}
+/*Hvordan body'en skal være*/
+body {
+    background-color: rgb(255, 255, 255); /* hvit bakgrunnsfarge */
+    font-family: Georgia, Times; /* Skriftype */
+  }
+
+#divstart{
+    line-height: 1.5; /* Linjeavstand */
+    text-align: center; /* Får teksten i midten */
+    font-size: 20px;
+}  
+#boks {
+    width: 50%; /* bredde: 50 % av vinduet */
+    border: 2px solid rgb(0, 0, 0); /* svart bakgrunnsfarge */
+    padding: 10px; /* luft mellom kantlinjene og innholdet */
+    margin: 100px auto; /* 100 px over elementet, auto midtstiller det */
+    text-align: center; /* Får teksten i midten */
+}
+
+a:hover {
+    color: rgb(34, 31, 233); /* Fargen når man går over linker  */
+    text-decoration-color: rgb(31, 119, 233); /* Fargen man får på linja under skriften */
+  }
+
+table, td, th {
+    border: 1px solid;
+  }
+  
+table {
+    width: 100%;
+    border-collapse: collapse;
+  }
