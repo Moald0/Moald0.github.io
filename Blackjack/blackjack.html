@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>BlackJack</h2>
+<div>Welcome to this game of BlackJack, do you think you have what it takes to beat the dealer?
+</div>
+<div>Good luck!
+</div>
+
+<p>Hit or Stand?</p>
+
+<!--De ulike knappene-->
+<button id="hit" onclick="hit()">Hit</button>
+<button id="stand" onclick="stand()">Stand</button>
+<button onClick="window.location.reload();">Start again?</button>
+
+<p id="playerScore"></p>
+<p id="dealerScore"></p>
+
+<script>
+
+// Scoren starter på null
+let dealerScore = 0;
+let playerScore = 0;
+
+// Får to kort
+let playerHand = [
+	getRandomNumber(),
+	getRandomNumber()
+];
+
+// Får to kort
+let dealerHand = [
+	getRandomNumber(),
+	getRandomNumber()
+];
+
+// Oppdaterer scoren
+playerScore = getScore(playerHand);
+dealerScore = getScore(dealerHand);
+
+// Oppdaterer html
+document.getElementById('playerScore').innerHTML = 'Player score: ' + playerScore;
+document.getElementById('dealerScore').innerHTML = 'Dealer score: ' + dealerScore;
+
+// Funksjon som setter til et tilfeldig kort og oppdaterer scoren i html
+function hit(){
+	let newCard = getRandomNumber();
+	playerHand.push(newCard);
+	playerScore = getScore(playerHand);
+	document.getElementById('playerScore').innerHTML = 'Player score: ' + playerScore;
+	
+	// Sjekker om spilleren buster
+	if(playerScore > 21){
+		alert('Bust!');
+		document.getElementById('hit').disabled = true;
+		document.getElementById('stand').disabled = true;
+	}
+}
+
+// Hvis dealeren har mindre enn 17 må dealeren trekke et kort
+function stand(){
+	while(dealerScore < 17){
+		let newCard = getRandomNumber();
+		dealerHand.push(newCard);
+		dealerScore = getScore(dealerHand);
+		document.getElementById('dealerScore').innerHTML = 'Dealer score: ' + dealerScore;
+	}
+	
+	// Sjekker om dealeren buster
+	if(dealerScore > 21){
+		alert('Dealer busts!');
+		document.getElementById('hit').disabled = true;
+		document.getElementById('stand').disabled = true;
+	}
+	
+	// Sammenligne scorene og gi beskjer hvem som vinner 
+	if(playerScore > dealerScore){
+		alert('You win!');
+	} else if (playerScore < dealerScore){
+		alert('You lose!');
+	} else {
+		alert('Tie!');
+	}
+}
+
+// Random tall funksjon, altså hvilket tall man får
+function getRandomNumber(){
+	return Math.floor(Math.random() * 11) + 1;
+}
+
+// En funksjon som sjekker om man har fått ess, hvis man har ess og scoren er over 21
+// Hvis det er det så vil scoren minkes med 10
+function getScore(hand){
+	let score = 0;
+	let hasAce = false;
+	
+	for(let i = 0; i < hand.length; i++){
+		score += hand[i];
+		if(hand[i] === 11){
+			hasAce = true;
+		}
+	}
+	
+	if(hasAce && score > 21){
+		score -= 10;
+	}
+	
+	return score;
+}
+</script>
+
+</body>
+</html>

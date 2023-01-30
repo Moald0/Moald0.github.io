@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blackjack Game</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #DCDCDC;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            text-align: center;
+        }
+        button {
+            font-size: 1.2rem;
+            padding: 10px;
+            background-color: #2196F3;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        #player-score, #dealer-score {
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Blackjack Game</h1>
+        <div id="player-score"></div>
+        <div id="dealer-score"></div>
+        <div id="hit-stick-btns">
+            <button id="hit-btn">Hit</button>
+            <button id="stick-btn">Stick</button>
+        </div>
+    </div>
+    <script>
+        // Create deck of cards
+        const deck = [
+            "Ace of Clubs", "2 of Clubs", "3 of Clubs", "4 of Clubs",
+            "5 of Clubs", "6 of Clubs", "7 of Clubs", "8 of Clubs",
+            "9 of Clubs", "10 of Clubs", "Jack of Clubs", "Queen of Clubs",
+            "King of Clubs", "Ace of Spades", "2 of Spades", "3 of Spades",
+            "4 of Spades", "5 of Spades", "6 of Spades", "7 of Spades",
+            "8 of Spades", "9 of Spades", "10 of Spades", "Jack of Spades",
+            "Queen of Spades", "King of Spades", "Ace of Hearts", "2 of Hearts",
+            "3 of Hearts", "4 of Hearts", "5 of Hearts", "6 of Hearts",
+            "7 of Hearts", "8 of Hearts", "9 of Hearts", "10 of Hearts",
+            "Jack of Hearts", "Queen of Hearts", "King of Hearts",
+            "Ace of Diamonds", "2 of Diamonds", "3 of Diamonds",
+            "4 of Diamonds", "5 of Diamonds", "6 of Diamonds",
+            "7 of Diamonds", "8 of Diamonds", "9 of Diamonds",
+            "10 of Diamonds", "Jack of Diamonds", "Queen of Diamonds",
+            "King of Diamonds"
+        ];
+        // Player and dealer scores
+        let playerScore = 0;
+        let dealerScore = 0;
+        // Shuffle deck
+        function shuffle(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                let j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+        }
+        // Deal cards
+        function deal() {
+            let playerCard = deck.shift();
+            let dealerCard = deck.shift();
+            // Update player and dealer scores
+            playerScore += getCardValue(playerCard);
+            dealerScore += getCardValue(dealerCard);
+            // Update UI
+            document.getElementById("player-score").innerHTML = `Player Score: ${playerScore}`;
+            document.getElementById("dealer-score").innerHTML = `Dealer Score: ${dealerScore}`;
+        }
+        // Get card value
+        function getCardValue(card) {
+            let cardValue = parseInt(card.split(" ")[0]);
+            if (Number.isNaN(cardValue)) {
+                if (card.split(" ")[0] === "Ace") {
+                    return 11;
+                } else {
+                    return 10;
+                }
+            } else {
+                return cardValue;
+            }
+        }
+        // Hit or stick buttons
+        document.getElementById("hit-btn").addEventListener("click", function() {
+            deal();
+            if (playerScore > 21) {
+                document.getElementById("hit-stick-btns").innerHTML = `<h2>You went bust!</h2>`;
+            }
+        });
+        document.getElementById("stick-btn").addEventListener("click", function() {
+            if (dealerScore > 21) {
+                document.getElementById("hit-stick-btns").innerHTML = `<h2>Dealer went bust! You win!</h2>`;
+            } else if (dealerScore > playerScore) {
+                document.getElementById("hit-stick-btns").innerHTML = `<h2>Dealer wins!</h2>`;
+            } else if (playerScore > dealerScore) {
+                document.getElementById("hit-stick-btns").innerHTML = `<h2>You win!</h2>`;
+            } else {
+                document.getElementById("hit-stick-btns").innerHTML = `<h2>It's a tie!</h2>`;
+            }
+        });
+        // Initial deal
+        shuffle(deck);
+        deal();
+    </script>
+</body>
+</html>
