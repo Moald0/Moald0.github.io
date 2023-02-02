@@ -1,0 +1,41 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+#game{
+    width: 400px;
+    height: 500px;
+    border: 1px solid black;
+    margin: auto;
+    overflow: hidden; /*Det som er utenfor boksen blir skjult*/
+}
+#blokk{
+    width: 50px;
+    height: 500px;
+    background-color: black;
+    position: relative;
+    left: 400px;        /*Får blokkene til å komme fra venstre side*/
+    animation: blokk 2s infinite linear; /*Animasjonen nedenfor, varer i 2s*/
+}
+/*Animasjon som får blokkene til å gå fra høyre til venstre, så det ser ut som at karakteren går til høyre*/
+@keyframes blokk{
+    0%{left:400px}
+    100%{left:-50px}
+}
+#hull{
+    width: 50px;
+    height: 150px;
+    background-color: white;
+    position: relative;
+    left: 400px;        /*Får blokkene til å komme fra venstre side*/
+    top: -500px; /*Toppen av blokken "fjernes", får en farge som er hvit*/
+    animation: blokk 2s infinite linear; /*Animasjonen nedenfor, varer i 2s*/
+}
+#karakter{
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    position: absolute;
+    top: 100px;
+    border-radius: 50%;  /*Sirkel formet figur*/
+}
