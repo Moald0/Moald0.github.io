@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="no"> <!--Språket på norsk, hjelper svaksynte med rett høytlesnings språk-->
+<head>
+    <meta charset="UTF-8"> <!--Forteller nettleseren å bruke UTF-8 (default setting, hjelper f.eks nettleseren å forstå skriften), som er den mest vanlige måten-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Skalerer nettsiden ut ifra hvilken enhet du er på-->
+    <title>Avslutningsprosjekt</title> <!--Tittel på nettsiden-->
+    <link rel="icon" type="image/x-icon" href="./Bilder/R2-logo.png"> <!--Lager ikonet til nettsiden-->
+    <link rel="stylesheet" href="./matte.css".css"> <!--Linker css filen til html-->
+    <link rel="stylesheet" href="./quiz.css">
+    <title>Kapitell Test</title>
+</head>
+</body>
+<!-- Kontainer for selve testen/quizen -->
+<div class="quiz-container" id="quiz">
+    <!-- Header for testen/quizen med spørsmål og svaralternativer -->
+    <div class="quiz-header">
+      <h2 id="question">Spørsmål tekst</h2>
+      <ul>
+        <li>
+          <!-- Radioknapp (rund knapp) for svaralternativ A -->   
+          <input type="radio" name="answer" id="a" class="answer">
+          <label for="a" id="a_text">Answer</label>
+        </li>
+        <li>
+          <!-- Radioknapp (rund knapp) for svaralternativ B -->   
+          <input type="radio" name="answer" id="b" class="answer">
+          <label for="b" id="b_text">Answer</label>
+        </li>
+        <li>
+          <!-- Radioknapp (rund knapp) for svaralternativ C -->   
+          <input type="radio" name="answer" id="c" class="answer">
+          <label for="c" id="c_text">Answer</label>
+        </li>
+        <li>
+          <!-- Radioknapp (rund knapp) for svaralternativ D -->  
+          <input type="radio" name="answer" id="d" class="answer">
+          <label for="d" id="d_text">Answer</label>
+        </li>
+      </ul>
+    </div>
+    <!-- Knapp for å bekrefte valgt svaralternativ -->
+    <button id="submit">Bekreft</button>
+  </div>
+<script type="text/javascript" src="quiz.js"></script>
+</body>
+</html>
