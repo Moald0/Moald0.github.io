@@ -1,0 +1,70 @@
+<html>
+<head>
+  <title>Weather App</title>
+  <style>
+    body{
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+
+    .weather-card{
+      margin: 0 auto;
+      background-color: #f5f5f5;
+      border-radius: 5px;
+      padding: 20px;
+      width: 300px;
+    }
+
+    .weather-card > h2 {
+      margin-top: 0;
+      font-size: 1.5em;
+    }
+
+    .weather-card > p {
+      font-size: 1.2em;
+    }
+
+    .weather-card > img {
+      width: 100px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="weather-card">
+    <h2>Weather Report</h2>
+    <p>Enter your city name:</p>
+    <input type="text" id="city-input" placeholder="City...">
+    <button onclick="getWeather()">Get Weather</button>
+    <img id="weather-icon">
+    <p id="weather-desc"></p>
+    <p id="temperature"></p>
+  </div>
+  <script>
+    function getWeather() {
+      // Get city
+      let city = document.getElementById('city-input').value;
+
+      // Make request
+      let xhr = new XMLHttpRequest();
+      xhr.open('GET', `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=API_KEY`, true);
+
+      xhr.onload = function() {
+        if(this.status == 200){
+          let response = JSON.parse(this.responseText);
+
+          let icon = response.weather[0].icon;
+          let description = response.weather[0].description;
+          let temperature = response.main.temp;
+
+          document.getElementById('weather-icon').src = `http://openweathermap.org/img/w/${icon}.png`;
+          document.getElementById('weather-desc').innerHTML = description;
+          document.getElementById('temperature').innerHTML = `${temperature} &#8457;`;
+        }
+      }
+
+      xhr.send();
+    }
+  </script>
+</body>
+</html>

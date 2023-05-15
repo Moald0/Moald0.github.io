@@ -1,0 +1,249 @@
+/*#region definert overskrift, body osv.*/
+/*Overskrift og annet*/
+hr {
+    color: 6px solid black;
+    border-color: black;
+}
+h1 {
+    font-family: Arial, sans-serif; /* Skrifttype */
+    margin: 35px auto; /* 50 px over elementet, auto midtstiller det */
+    text-align: center; /* Får teksten i midten */
+}
+body{
+    background-color: white;
+    color: black;
+    font-family: Arial, sans-serif; /* Skrifttype */
+}
+/*Større skrift på overskriften*/
+#overskrift {
+    font-size: 24px; 
+}
+/*#endregion*/
+
+/* #region main side */
+
+
+/*#region Dropdown meny hovedside*/
+/*Stilen på meny-boksen, farge, border osv.*/
+.dropbtn {
+    background-color: #aac9c6; /*Bakgrunnsfarge*/
+    color: black; /*Farge*/
+    padding: 35px; /* luft mellom kantlinjene og innholdet */
+    font-size: 16px; /*Skriftstørrelse*/
+    border: 5px solid #066675; /*Tykkelse og farge på border*/
+    margin: 10px auto; /* 10 px over elementet, auto midtstiller det */
+    border-radius: 10%;
+}
+/*Posisjonerer <div>'en*/
+.dropdown {
+    position: relative; /*Endrer posisjonen relativt til dropdownen*/
+    display: inline-block; /*Setter en høyde og bredde for dropdownen, så den ser mer "smooth" :)*/
+}
+/*Det som definerer dropdownen, farge osv.*/
+.dropdown-content {
+    display: none; /*Har ingen effekt på layouten, men gjør det slik at dropdownen ikke vises før man hoverer over meny-boksen*/ 
+    position: absolute; /*Har en absolutt posisjon*/
+    background-color: #f1f1f1; /*Bakgrunnsfarge*/
+    min-width: 160px; /*Minimum bredde*/
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /*Fargen når man hoverer over dropdownen*/
+    z-index: 1; /*z-index brukes for å få farge og teksten til å overlappes, sånn at fargen ikke er over teksten*/
+}
+/*Linker inne i dropdownen/menyen*/
+.dropdown-content a {
+    color: black; /*farge*/
+    padding: 12px 16px; /* luft mellom kantlinjene og innholdet */
+    text-decoration: none; /*Ingen tekst dekorasjon, er egentlig lenke på dropdownen, men dette fjerner streken under teksten osv.*/ 
+    display: block; /*Starter på ny linje, altså dropdownen får fire "bokser", istedenfor at alt står på samme sted*/
+}
+/*Når man hoverer over det under menyen vil det skifte farge*/
+.dropdown-content a:hover {background-color: #ddd;}
+/*Når man hoverer over menyen vil det under vises*/
+.dropdown:hover .dropdown-content {display: block;}
+/*Når man hoverer over meny-boksen vil den få en litt mørkere grønn farge*/
+.dropdown:hover .dropbtn {background-color: #8d2e2e;}
+/*#endregion*/
+
+/*#region definert toppsiden*/
+/*Definerer toppsiden*/
+#topp{
+    display: grid;
+    grid-template-columns: 10% 25% 50% 15%; /*Hvor mye plass hvert element skal bruke*/
+    gap: 10px; /*Avstanden/mellomrom*/
+    grid-template-rows: 115px; /*"Høyden" på toppsiden*/
+    background-color: #aac9c6; /*Farge*/
+}
+/*Definerer bilde i toppen*/
+#toppbilde {
+    padding: 1px; /* luft mellom kantlinjene og innholdet */
+    margin: 10px auto; /* 10 px over elementet, auto midtstiller det */
+}
+/*Definerer toppboksen*/
+#toppboks {
+    width: 50%; /* bredde: 50 % av vinduet */
+    border: 5px solid #066675; /* rød bakgrunnsfarge */
+    padding-left: 1px; /* luft mellom kantlinjene og innholdet */
+    margin: 10px auto; /* 10 px over elementet, auto midtstiller det */
+    text-align: center; /* Får teksten i midten */
+    background-color: #aac9c6; /*Bakgrunnsfarge*/
+    border-radius: 10%; /*Avrunder kantene*/
+}
+
+/*Definerer info bildet i toppen*/
+#toppinfo {
+    padding: 1px; /* luft mellom kantlinjene og innholdet */
+    margin: 5px auto; /* 10 px over elementet, auto midtstiller det */
+}
+/*#endregion*/
+
+/*#region boksene på hovedsiden*/
+/*Definerer boksene på hovedsiden*/
+#main {
+    display: grid; /*Definere grid*/
+    gap: 1px; /*Avstanden/mellomrom*/
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /*Hvor mye plass og hvor mange som skal stå i rekke,
+    gjør det for at boksene skal justeres etter hva slags enhet brukeren bruker og eventuelt hvor mye zoomet inn/ut leseren har.*/
+    justify-items: center; /*Justerer det til midten*/
+    text-align: center; /*Skriften i midten*/
+    font-size: large; /*Stor skriftstr*/
+}
+  
+/*Selve boksene*/
+#main > div {
+    width: 300px; /*Bredden*/
+    height: 100px; /*Høyden*/
+    background-color: #aac9c6; /*Farge*/
+    border: 2px solid black; /*Border farge og tykkelse*/
+    border-radius: 10px; /*Avrunder kantene*/
+}
+/* #endregion*/
+/*#endregion*/
+
+
+/*#region kalkulator og quiz embedd*/
+/*Quiz og kalkluator embedd, gjør at både kalkulatoren og quizen vises*/
+.kalkulatorEmbedd{
+    border: none; /*Ingen border*/
+    overflow: hidden; /**/
+    /*Gjør størrelsen på kalkulatoren slik jeg oppga den i kalkulator.css*/ 
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.quizEmbedd{
+    border: none; /*Ingen border*/
+    overflow: hidden; /**/
+    /*Gjør størrelsen på kalkulatoren slik jeg oppga den i kalkulator.css*/ 
+    position: absolute;
+    width: 1332.5px;
+    height: 100%;
+}
+/*#endregion*/
+
+
+/*#region boksnene på pensum siden*/
+/*Definerer boksene på pensum siden*/
+#pensum {
+    display: grid; /*Definere grid*/
+    gap: 1px; /*Avstanden/mellomrom*/
+    grid-template-columns: repeat(auto-fit, minmax(400px, 2fr)); /*Hvor mye plass og hvor mange som skal stå i rekke,
+    gjør det for at boksene skal justeres etter hva slags enhet brukeren bruker og eventuelt hvor mye zoomet inn/ut leseren har.*/
+    justify-items: center; /*Justerer det til midten*/
+    text-align: center; /*Skriften i midten*/
+}
+  
+/*Selve boksene*/
+#pensum > div {
+    margin: 35px auto; /* 50 px over elementet, auto midtstiller det */
+    text-align: center; /* Får teksten i midten */
+    border: 2px solid black;
+    width: 300px; /*Bredden*/
+}
+/*#endregion*/
+
+
+/*#region boksene på omfaget siden*/
+/*Definerer boksene på omfaget siden*/
+#omfaget {
+    display: grid; /*Definere grid*/
+    gap: 1px; /*Avstanden/mellomrom*/
+    grid-template-columns: repeat(auto-fit, minmax(400px, 2fr)); /*Hvor mye plass og hvor mange som skal stå i rekke,
+    gjør det for at boksene skal justeres etter hva slags enhet brukeren bruker og eventuelt hvor mye zoomet inn/ut leseren har.*/
+    justify-items: center; /*Justerer det til midten*/
+    text-align: center; /*Skriften i midten*/
+}
+  
+/*Selve boksene*/
+#omfaget > div {
+    margin: 35px auto; /* 50 px over elementet, auto midtstiller det */
+    text-align: left; /* Får teksten i midten */
+    width: 300px; /*Bredden*/
+    height: 150px; /*Høyden*/
+    background-color: #aac9c6; /*Farge*/
+    border: 2px solid black; /*Border farge og tykkelse*/
+    border-radius: 10px;
+}
+/*#endregion*/
+
+/* #region tilbake-knapp */
+/*Tilbake knapp*/
+#knapp {
+    width: 15%;
+    font-size: 16px;
+    cursor: pointer;
+    color: #fff; /**/
+    background-color: #aac9c6;
+    box-shadow: 0 9px #999;
+    border: 2px solid black; /*Border farge og tykkelse*/
+    border-radius: 10px; /*Avrunder kantene*/
+    padding: 10px; /* luft mellom kantlinjene og innholdet */
+    margin: 100px auto; /* 100 px over elementet, auto midtstiller det */
+    text-align: center; /* Får teksten i midten */
+}
+
+/*Endrer fargen når man hoverer over*/  
+#knapp:hover {
+    background-color: #066675
+} 
+
+#knapp:active {
+    background-color: #aac9c6; /*Endrer fargen tilbake til det som var*/
+    box-shadow: 0 5px #666; /*Endrer skyggeeffekten*/
+    transform: translateY(4px); /*Flytter knappen 4 piksler ned, så det ser ut som man trykker på den*/
+}
+/*#endregion*/
+
+
+/*#region info definert*/
+#info {
+    width: 50%; /* bredde: 50 % av vinduet */
+    border: 2px solid black; /*Border farge og tykkelse*/
+    border-radius: 10px;
+    padding: 10px; /* luft mellom kantlinjene og innholdet */
+    margin: 100px auto; /* 100 px over elementet, auto midtstiller det */
+    text-align: left; /* Får teksten i midten */
+    background-color: #aac9c6;
+}
+/*#endregion*/
+
+
+/*#region definert kapitteler*/
+#kapittel {
+    width: 50%; /* bredde: 50 % av vinduet */
+    border: 2px solid black; /*Border farge og tykkelse*/
+    border-radius: 10px; /*Avrunder kantene*/ 
+    padding: 10px; /* luft mellom kantlinjene og innholdet */
+    margin: 100px auto; /* 100 px over elementet, auto midtstiller det */
+    text-align: left; /* Får teksten i midten */
+    background-color: #aac9c6;
+}
+
+#kaptest {
+    width: 25%;
+    border: 2px solid black; /*Border farge og tykkelse*/
+    border-radius: 10px; /*Avrunder kantene*/
+    padding: 10px; /* luft mellom kantlinjene og innholdet */
+    margin: 100px auto; /* 100 px over elementet, auto midtstiller det */
+    text-align: center; /* Får teksten i midten */
+    background-color: #aac9c6;
+}
+/*#endregion*/

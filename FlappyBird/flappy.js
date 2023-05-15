@@ -12,7 +12,7 @@ hull.addEventListener('animationiteration', () => { //Funksjonen kjører når an
     hull.style.top = random + "px";
     counter++; //En counter
 });
-//Tyngekraft, får karakteren til å gå nedover
+//Tyngdekraft, får karakteren til å gå nedover
 setInterval(function(){
     var karakterTop = 
     parseInt(window.getComputedStyle(karakter).getPropertyValue("top"));
@@ -23,14 +23,15 @@ setInterval(function(){
     var hullTop = parseInt(window.getComputedStyle(hull).getPropertyValue("top"));
     var karakterTop = parseInt(window.getComputedStyle(karakter).getPropertyValue("top"));
     var cTop = -(500-karakterTop);
-    //Detektor til når spillet er over
+    //Alle grunnene til når spillet er over
     if((karakterTop>480)||((blokkleft<20)&&(blokkleft>-50)&&((cTop<hullTop)||(cTop>hullTop+130)))){
         alert("Spillet er over! Scoren din ble: "+counter);
         karakter.style.top = 100 + "px";
-        counter=0; //Restarter scoren til 0, sånn at den ikke blir evig
+        counter=0; //Restarter scoren til 0, sånn at den ikke fortsetter fra forrige runde
     }    
 },10);
 //En hoppe funksjon, får karakteren til å "hoppe"
+//Fordi "tyngdekraften" går nedover med -3, går karakteren +5 opp, slikt at det skal se ut som at karakteren hopper
 function hopp(){
     hoppe = 1
     let hoppCount = 0;

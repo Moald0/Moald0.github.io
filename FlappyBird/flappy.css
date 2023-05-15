@@ -8,14 +8,15 @@
     border: 1px solid black;
     margin: auto;
     overflow: hidden; /*Det som er utenfor boksen blir skjult*/
+    background: url('rsz_1bakgrunnflappybird.jpg');
 }
 #blokk{
     width: 50px;
     height: 500px;
-    background-color: black;
+    background-color: greenyellow;
     position: relative;
     left: 400px;        /*Får blokkene til å komme fra venstre side*/
-    animation: blokk 2s infinite linear; /*Animasjonen nedenfor, varer i 2s*/
+    animation: blokk 2s infinite linear; /*Animasjonen nedenfor, varer i 2 sekunder*/
 }
 /*Animasjon som får blokkene til å gå fra høyre til venstre, så det ser ut som at karakteren går til høyre*/
 @keyframes blokk{
@@ -25,16 +26,17 @@
 #hull{
     width: 50px;
     height: 150px;
-    background-color: white;
     position: relative;
     left: 400px;        /*Får blokkene til å komme fra venstre side*/
     top: -500px; /*Toppen av blokken "fjernes", får en farge som er hvit*/
     animation: blokk 2s infinite linear; /*Animasjonen nedenfor, varer i 2s*/
+    background: wheat
 }
+
 #karakter{
     width: 20px;
     height: 20px;
-    background-color: red;
+    background-color: yellow;
     position: absolute;
     top: 100px;
     border-radius: 50%;  /*Sirkel formet figur*/

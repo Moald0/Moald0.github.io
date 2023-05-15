@@ -1,0 +1,46 @@
+#hoved {
+    width: 50%; /* bredde: 50% av vinduet */
+    background-color: lightgray;
+    padding: 10px;
+    margin: 50px auto;
+    border-radius: 10px;
+    height: 500px;
+    border: 4px solid gray;
+}
+
+#spm {
+    border-radius: 10px;
+    background-color: white;
+    border: 3px solid black;
+    height: 50px;
+    text-align: center;
+    font-size: 150%;
+    font-variant: normal;
+}
+
+#bilde {
+    background-color: none ;
+    text-align: center;
+}
+
+#boks {
+    display: grid; /*Definere grid*/
+    gap: 2px; /*Avstanden/mellomrom*/
+    grid-template-columns: repeat(auto-fit, minmax(300px, 2fr)); /*Hvor mye plass og hvor mange som skal stå i rekke,
+    gjør det for at boksene skal justeres etter hva slags enhet brukeren bruker og eventuelt hvor mye zoomet inn/ut leseren har.*/
+}
+
+#boks > div{
+    background-color: white;
+    padding: 30px; /* luft mellom kantlinjene og innholdet */
+    margin: 10px auto; /* 100 px over elementet, auto midtstiller det */
+    border-radius: 25px; /*Lager "smooth" hjørner, altså radiusen til firkanten */
+    border: 4px solid black; /*En border, 4px rundt, svart farge*/
+}
+
+#svar {
+    text-align: center; /*Teksten midtstilles */
+    width: 150px;
+    height: 50px;
+    font-size: 150%;
+}

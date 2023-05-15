@@ -1,0 +1,61 @@
+/*Stil for kalkulataor-elementet*/
+.calculator {
+    padding: 10px;
+    border-radius: 1em;
+    height: 380px;
+    width: 400px;
+    margin: auto;
+    background-color: black;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    font-size: 30px;
+}
+
+/*Stil for display-boksen*/
+.display-box {
+    font-family: Arial, sans-serif;
+    background-color: grey;
+    border: solid black 0.5px;
+    color: black;
+    border-radius: 5px;
+    width: 100%;
+    height: 65%;
+    font-size: 30px;
+}
+
+/*Stil for knappen med ID btn*/
+#btn {
+    background-color: #8d2e2e;
+}
+
+/*Stilen for knappene*/
+input[type=button] {
+    font-family: Arial, sans-serif; /* Skrifttype */
+    background-color: #aac9c6;
+    color: black;
+    border: solid black 0.5px;
+    width: 100%;
+    border-radius: 5px;
+    height: 70%;
+    outline: none;
+    font-size: 30px;
+}
+
+/*Stil for knappene når du blir trykket på*/
+input:active[type=button] {
+    background: #e5e5e5;
+    -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+    -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+    box-shadow: inset 0px 0px 5px #c1c1c1;
+}
+
+/*Stil for display-boksen*/
+.display-box {
+    font-family: Arial, sans-serif; /* Skrifttype */
+    background-color: #dcdbe1;
+    border: solid black 0.5px;
+    color: black;
+    border-radius: 5px;
+    width: 100%;
+    height: 65%;
+    font-size: 30px;
+}
